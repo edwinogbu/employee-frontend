@@ -8,10 +8,17 @@ function Sidebar({ style, toggleSidebar }) {
             {/* Sidebar - Brand */}
             <a className="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div className="sidebar-brand-icon rotate-n-15">
-                    <i className="fas fa-laugh-wink"></i>
+                    {/* <i className="fas fa-laugh-wink"></i> */}
+                    <img className="sidebar-card-illustration mb-2" src="img/fire.jpg" alt="..." style={{width:20,}}/>
                 </div>
-                <div className="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <br />
+                <div className="sidebar-brand-text mx-3">Administrative</div>
+            <div className="text-center d-none d-md-inline">
+                <button className="rounded-circle border-0" id="sidebarToggle" onClick={toggleSidebar}></button>
+            </div>
             </a>
+               
+            {/* Sidebar Toggler (Sidebar) */}
 
             {/* Divider */}
             <hr className="sidebar-divider my-0" />
@@ -63,6 +70,24 @@ function Sidebar({ style, toggleSidebar }) {
                         <Link to="/add-fees" className="collapse-item" href="utilities-color.html">Add Payment details</Link>
                         <Link to="view-fees" className="collapse-item" href="utilities-border.html">View Fees Paid</Link>
                         <Link to="/student-transcript" className="collapse-item" href="utilities-border.html">Student Transcript</Link>
+                    </div>
+                </div>
+            </li>
+            {/* Nav Item - Utilities Collapse Menu */}
+            <li className="nav-item">
+                <a className="nav-link collapsed" href="#" data-toggle="collapse" data-target="#scollapseUtilities"
+                    aria-expanded="true" aria-controls="scollapseUtilities">
+                    <i className="fas fa-fw fa-wrench"></i>
+                    <span>Students</span>
+                </a>
+                <div id="scollapseUtilities" className="collapse" aria-labelledby="headingUtilities"
+                    data-parent="#accordionSidebar">
+                    <div className="bg-white py-2 collapse-inner rounded">
+                        {/* <Link to="/manage-fees" className="collapse-header">Manage Payment:</Link> */}
+                        <Link to="/students" className="collapse-item" >students</Link>
+                        <Link to="/add-student" className="collapse-item" >Add students</Link>
+                        <Link to="view-student" className="collapse-item" >View students</Link>
+                        <Link to="/student-transcript" className="collapse-item" >Student Transcript</Link>
                     </div>
                 </div>
             </li>
@@ -122,9 +147,8 @@ function Sidebar({ style, toggleSidebar }) {
 
             {/* Sidebar Message */}
             <div className="sidebar-card d-none d-lg-flex">
-                <img className="sidebar-card-illustration mb-2" src="img/undraw_rocket.svg" alt="..." />
-                <p className="text-center mb-2"><strong>SB Admin Pro</strong> is packed with premium features, components, and more!</p>
-                <a className="btn btn-success btn-sm" href="https://startbootstrap.com/theme/sb-admin-pro">Upgrade to Pro!</a>
+                <img className="sidebar-card-illustration mb-2" src="img/fire.jpg" alt="..." />
+                <p className="text-center mb-2"><strong>Floral Admin </strong> !</p>
             </div>
 
         </ul>

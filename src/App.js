@@ -14,6 +14,10 @@ import PostDetail from './pages/PostDetail ';
 import Dashboard from './Dashboard ';
 import AddFee from './fees/AddFee';
 import EditFee from './fees/ViewFee';
+import AddStudent from './student/student/AddStudent';
+import EditStudent from './student/student/EditStudent';
+import ViewStudents from './student/student/ViewStudents';
+import StudentTable from './component/StudentTable';
 
 function App({posts}) {
 
@@ -86,6 +90,13 @@ function App({posts}) {
 
           <Route path="/blogDetail/:id" element={<PostDetail posts={posts} />} />
 
+
+        </Routes>
+        <Routes>
+          <Route exact path='/students' element={<StudentTable />} />
+          <Route exact path='/addstudent' element={<AddStudent />} />
+          <Route exact path='/editstudent/:id' element={<EditStudent/>} />
+          <Route exact path='/viewstudent/:id' element={<ViewStudents />} />
 
         </Routes>
       </Router>

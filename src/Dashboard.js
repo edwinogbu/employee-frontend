@@ -18,6 +18,10 @@ import AddFee from './fees/AddFee';
 import ViewFee from './fees/ViewFee';
 import EditFee from './fees/EditFee';
 import StudentTranscript from './pages/StudentTranscript';
+import AddStudent from './student/student/AddStudent';
+import EditStudent from './student/student/EditStudent';
+import ViewStudents from './student/student/ViewStudents';
+import StudentTable from './component/StudentTable';
 
 
 function Dashboard() {
@@ -57,7 +61,8 @@ function Dashboard() {
 
                             <div className="container-fluid">
                                 <div className="d-sm-flex align-items-center justify-content-between mb-4">
-                                    <h1 className="h2 mb-2 text-primary-800 m-0 font-weight-bold text-primary">The Floral International College</h1>
+                                    <h1 className="h2 mb-2 text-primary-800 m-0 font-weight-bold text-primary">Student Portal</h1>
+                                    {/* <h1 className="h2 mb-2 text-primary-800 m-0 font-weight-bold text-primary">The Floral International College</h1> */}
                                     <a href="#" className="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                                         <i className="fas fa-download fa-sm text-white-50"></i> Generate Report
                                     </a>
@@ -86,6 +91,14 @@ function Dashboard() {
                                         
                                         
                                         <Route path="/student-transcript" element={<StudentTranscript />} />
+                                    </Routes>
+
+                                             
+                                    <Routes>
+                                        <Route path="/students" element={<StudentTable />} />
+                                        <Route path="/add-student" element={<AddStudent />} />
+                                        <Route path="/edit-student/:id" element={<EditStudent />} />
+                                        <Route path="/view-student/:id" element={<ViewStudents />} />
                                     </Routes>
 
 
